@@ -1,0 +1,85 @@
+@import '../../scss/vars.scss';
+@import '../../scss/mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 2rem;
+}
+.form {
+  width: $full-width;
+}
+.authContainer {
+  display: flex;
+  align-items: center;
+  min-width: 45rem;
+}
+.authImg {
+  @include auth-image;
+}
+.content {
+  @include auth-content;
+}
+.content h1 {
+  @include auth-header;
+}
+.content p {
+  font-size: 1.2rem;
+}
+.input {
+  font-size: 1rem;
+}
+.loginButton {
+  width: $full-width;
+  background-color: $primary-red;
+  margin: 1.5rem 0rem;
+  &:hover {
+    background-color: $dark-red;
+  }
+}
+.registerLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.link {
+  color: $medium-red;
+  padding: 1rem 0;
+
+  &:hover {
+    color: $light-red;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 1rem;
+  }
+  .authContainer {
+    flex-direction: column;
+  }
+  .authImg {
+    width: 25rem;
+    padding: 1.5rem;
+  }
+
+  .content {
+    margin: 0rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .loginButton {
+    font-size: small;
+    padding: 0.5rem;
+    align-items: center;
+  }
+}
