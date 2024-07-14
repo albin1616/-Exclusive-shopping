@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './CustomInput.module.scss';
+import React from "react";
+import styles from "./CustomInput.module.scss";
 
 interface CustomInputProps {
   type: string;
@@ -21,7 +21,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
         type={type}
         name={name}
         placeholder={placeholder}
-        className={`${styles.input} ${className ? className : ''}`}
+        className={`${styles.input} ${className ? className : ""}`}
       />
     </div>
   );

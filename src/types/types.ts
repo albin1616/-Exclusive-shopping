@@ -1,7 +1,7 @@
 export interface CustomButtonProps {
   label: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  type?: 'button' | 'submit' | 'reset';
+  type?: "button" | "submit" | "reset";
   className?: string;
 }
 
@@ -15,3 +15,5 @@ export interface RegisterCredentials {
   userEmail: string;
   userPassword: string;
 }
+
+export type Credentials = LoginCredentials | RegisterCredentials;

@@ -1,16 +1,18 @@
-@import '../../scss/vars.scss';
-.label {
-  margin-bottom: 1rem;
-}
+@import "../../scss/vars.scss";
+
 .CustomInput {
   display: flex;
   flex-direction: column;
-  width: $full-width;
-}
-.input {
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: $times-new-roman;
+
+  .label {
+    margin-bottom: 1rem;
+  }
+
+  .input {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: $times-new-roman;
+  }
 }
