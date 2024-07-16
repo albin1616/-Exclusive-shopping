@@ -1,14 +1,10 @@
-import { Credentials } from "../../types/types";
+import { Credentials, ValidationErrors } from "../../types/types";
 
 export const validateForm = (
   credentials: Credentials,
   formType: "login" | "register",
 ) => {
-  const errors: {
-    userName?: string;
-    userEmail?: string;
-    userPassword?: string;
-  } = {};
+  const errors: ValidationErrors = {};
 
   if (formType === "register" && "userName" in credentials) {
     if (!credentials.userName) {

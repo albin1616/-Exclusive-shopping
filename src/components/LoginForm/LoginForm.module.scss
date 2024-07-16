@@ -6,16 +6,17 @@
   align-items: center;
   justify-content: space-between;
   font-weight: bold;
-  padding: 2rem;
+  height: 100vh;
 
   .authContainer {
     display: flex;
     align-items: center;
     min-width: 45rem;
+    gap: 4.5rem;
+    width: $full-width;
 
     .authImg {
-      width: 42rem;
-      padding: 2rem;
+      width: 50%;
       min-width: 30rem;
     }
 
@@ -23,12 +24,10 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin: 4rem;
       font-family: $main-font;
 
       h1 {
         @include auth-header;
-        font-weight: 400;
       }
 
       p {
@@ -41,13 +40,18 @@
 
         .input {
           font-size: 1rem;
+          font-family: $main-font;
         }
+
         .error {
           color: $dark-red;
+          font-size: 0.85rem;
         }
+
         .loginButton {
           width: $full-width;
           background-color: $primary-red;
+          font-size: 1.3rem;
           margin: 1.5rem 0;
 
           &:hover {
@@ -82,25 +86,64 @@
 
 @media screen and (max-width: 900px) {
   .container {
-    padding: 1rem;
-    align-items: center;
-
     .authContainer {
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      min-width: unset;
+      background-image: url("~/public/assets/auth/auth.png");
+      background-color: rgba(84, 83, 83, 0.574);
+      background-blend-mode: darken;
+      background-size: cover;
+      background-position: center;
+      object-fit: cover;
+      overflow: hidden;
 
       .authImg {
-        width: 25rem;
-        padding: 1.5rem;
+        display: none;
+        min-width: unset;
       }
 
       .content {
-        margin: 0rem;
-        align-items: center;
-      }
+        width: 80%;
+        color: $primary-white;
 
-      .loginButton {
-        font-size: small;
-        padding: 0.5rem;
+        h1 {
+          font-size: 1.8rem;
+          font-weight: 500;
+        }
+
+        p {
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: auto;
+        }
+
+        .form {
+          .input {
+            font-size: 0.8rem;
+            font-family: $main-font;
+            outline: none;
+          }
+
+          .loginButton {
+            font-size: 1.01rem;
+            padding: 0.5rem;
+          }
+        }
+
+        .registerLink {
+          p {
+            font-weight: 500;
+          }
+
+          .link {
+            font-size: 1rem;
+            font-weight: 500;
+            color: $primary-white;
+          }
+        }
       }
     }
   }

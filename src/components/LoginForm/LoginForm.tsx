@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { LoginCredentials } from "../../types/types";
 import { AuthConstants } from "../../constants/AuthConstant";
 import { validateForm } from "../Validation/validation";
+import { Toaster, toast } from "sonner";
 import styles from "./LoginForm.module.scss";
 
 export default function LoginForm() {
@@ -15,10 +16,7 @@ export default function LoginForm() {
     userEmail: "",
     userPassword: "",
   });
-  const [errors, setErrors] = useState<{
-    userEmail?: string;
-    userPassword?: string;
-  }>({});
+  const [errors, setErrors] = useState<Partial<LoginCredentials>>({});
 
   useEffect(() => {
     fetch("/data/authdata.json")
@@ -42,9 +40,12 @@ export default function LoginForm() {
         loginCredentials.userEmail === credentials.userEmail &&
         loginCredentials.userPassword === credentials.userPassword
       ) {
-        navigate("/");
+        toast.success("Login Succesfull");
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
       } else {
-        alert("Invalid credentials. Please try again.");
+        toast.error("Invalid credentials. Please try again.");
       }
     } else {
       setErrors(formErrors);
@@ -53,12 +54,14 @@ export default function LoginForm() {
 
   return (
     <section className={styles.container}>
+      <Toaster position="top-right" />
       <div className={styles.authContainer}>
         <img
           className={styles.authImg}
           src={getImageUrl("auth/auth.png")}
           alt="profile"
         />
+
         <div className={styles.content}>
           <h1>{AuthConstants.LOG_IN}</h1>
           <p>{AuthConstants.ENTER_DETAILS}</p>
@@ -66,7 +69,7 @@ export default function LoginForm() {
             <CustomInput
               type="text"
               name="userEmail"
-              placeholder="UserEmail"
+              placeholder="Enter your Email"
               className={styles.input}
             />
             {errors.userEmail && (
@@ -75,13 +78,12 @@ export default function LoginForm() {
             <CustomInput
               type="password"
               name="userPassword"
-              placeholder="Password"
+              placeholder="Enter your Password"
               className={styles.input}
             />
             {errors.userPassword && (
               <span className={styles.error}>{errors.userPassword}</span>
             )}
-
             <CustomButton
               label="Log In"
               type="submit"

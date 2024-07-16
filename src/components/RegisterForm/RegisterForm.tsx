@@ -6,13 +6,10 @@ import { RegisterCredentials } from "../../types/types";
 import { AuthConstants } from "../../constants/AuthConstant";
 import { validateForm } from "../Validation/validation";
 import styles from "./RegisterForm.module.scss";
+import { Link } from "react-router-dom";
 
 export default function RegisterForm() {
-  const [errors, setErrors] = useState<{
-    userName?: string;
-    userEmail?: string;
-    userPassword?: string;
-  }>({});
+  const [errors, setErrors] = useState<Partial<RegisterCredentials>>({});
 
   function handleRegisterForm(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -41,7 +38,7 @@ export default function RegisterForm() {
             <CustomInput
               type="text"
               name="userName"
-              placeholder="Name"
+              placeholder="Enter your Name"
               className={styles.input}
             />
             {errors.userName && (
@@ -50,7 +47,7 @@ export default function RegisterForm() {
             <CustomInput
               type="text"
               name="userEmail"
-              placeholder="UserEmail"
+              placeholder="Enter your Email"
               className={styles.input}
             />
             {errors.userEmail && (
@@ -59,7 +56,7 @@ export default function RegisterForm() {
             <CustomInput
               type="password"
               name="userPassword"
-              placeholder="Password"
+              placeholder="Enter your Password"
               className={styles.input}
             />
             {errors.userPassword && (
@@ -71,6 +68,12 @@ export default function RegisterForm() {
               className={styles.registerButton}
             />
           </form>
+          <div className={styles.registerLink}>
+            <p>{AuthConstants.ALREADY_HAVE_AN_ACCOUNT}</p>
+            <Link to="/login" className={styles.link}>
+              {AuthConstants.LOG}
+            </Link>
+          </div>
         </div>
       </div>
     </section>

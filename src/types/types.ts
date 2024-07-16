@@ -16,4 +16,9 @@ export interface RegisterCredentials {
   userPassword: string;
 }
 
+export interface ValidationErrors {
+  userName?: string;
+  userEmail?: string;
+  userPassword?: string;
+}
 export type Credentials = LoginCredentials | RegisterCredentials;
