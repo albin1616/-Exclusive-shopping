@@ -12,12 +12,13 @@
     display: flex;
     align-items: center;
     min-width: 45rem;
-    gap: 4.5rem;
+    gap: 10rem;
     width: $full-width;
 
     .authImg {
       width: 50%;
       min-width: 30rem;
+      height: 100vh;
     }
 
     .content {
@@ -48,13 +49,9 @@
         }
         .registerButton {
           width: $full-width;
-          background-color: $primary-red;
+          background-color: $primary-black;
           font-size: 1.3rem;
           margin: 1.5rem 0;
-
-          &:hover {
-            background-color: $dark-red;
-          }
         }
       }
       .registerLink {
@@ -70,7 +67,7 @@
         .link {
           color: $medium-red;
           padding: 1rem 0;
-          font-weight: 450;
+          font-weight: 450;         
 
           &:hover {
             color: $light-red;
@@ -107,7 +104,7 @@
         color: $primary-white;
 
         h1 {
-          font-size: 1.8rem;
+          font-size: 2rem;
           font-weight: 500;
         }
 
@@ -118,11 +115,14 @@
         }
         .form {
           .input {
-            font-size: 0.8rem;
+            font-size: 0.999rem;
             font-family: $main-font;
             outline: none;
           }
-
+          .error {
+            color: $error-red;
+            font-size: 0.85rem;
+          }
           .registerButton {
             font-size: 1.01rem;
             padding: 0.5rem;
