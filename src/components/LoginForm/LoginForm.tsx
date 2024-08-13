@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CustomInput from "../CustumInput/CustomInput";
-import { getImageUrl } from "../../utils";
+import { getImageUrl } from "../../utils/utils";
 import CustomButton from "../CustomButton/CustomButton";
 import { useNavigate } from "react-router-dom";
 import { LoginCredentials } from "../../types/types";
@@ -40,12 +40,16 @@ export default function LoginForm() {
         loginCredentials.userEmail === credentials.userEmail &&
         loginCredentials.userPassword === credentials.userPassword
       ) {
-        toast.success("Login Succesfull");
+        toast.success("Login Successful", {
+          className: styles.toastSuccess,
+        });
         setTimeout(() => {
           navigate("/");
         }, 2000);
       } else {
-        toast.error("Invalid credentials. Please try again.");
+        toast.error("Invalid credentials. Please try again.", {
+          className: styles.toastError,
+        });
       }
     } else {
       setErrors(formErrors);
@@ -54,7 +58,12 @@ export default function LoginForm() {
 
   return (
     <section className={styles.container}>
-      <Toaster position="top-right" />
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          className: styles.toastMessage,
+        }}
+      />
       <div className={styles.authContainer}>
         <img
           className={styles.authImg}

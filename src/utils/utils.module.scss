@@ -1,0 +1,44 @@
+@import "../scss/vars.scss";
+.star {
+  font-size: 1.5rem;
+  color: $gold;
+
+  .full {
+    color: $gold;
+  }
+
+  .half {
+    color: $gold;
+    position: relative;
+
+    .star:before {
+      content: "★";
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $gold;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .empty {
+    color: $lighgray;
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.review-count {
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 900px) {
+  .star {
+    font-size: 1.3rem;
+  }
+}

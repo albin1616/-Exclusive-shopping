@@ -1,12 +1,6 @@
 import React from "react";
+import { CustomInputProps } from "../../types/types";
 import styles from "./CustomInput.module.scss";
-
-interface CustomInputProps {
-  type: string;
-  name: string;
-  placeholder: string;
-  className?: string;
-}
 
 const CustomInput: React.FC<CustomInputProps> = ({
   type,

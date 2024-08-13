@@ -1,0 +1,18 @@
+@import "../../scss/vars.scss";
+
+.container {
+  width: 100%;
+  background-color: $primary-black;
+  color: $primary-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: $main-font;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}

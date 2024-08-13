@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "image": "todays/joystick.jpg",
+    "name": "High-Precision Gaming Joystick with Ergonomic Design",
+    "price": "$100",
+    "oldPrice": "$120",
+    "rating": 5,
+    "reviewCount": 23,
+    "description": "Experience ultimate control and comfort with our high-precision gaming joystick. Designed with an ergonomic grip for long gaming sessions."
+  },
+  {
+    "id": 2,
+    "image": "todays/chair.jpg",
+    "name": "Deluxe Ergonomic Office Chair with Lumbar Support",
+    "price": "$200",
+    "oldPrice": "$270",
+    "rating": 4.0,
+    "reviewCount": 10,
+    "description": "Enhance your workspace with this deluxe ergonomic office chair, featuring adjustable lumbar support and a comfortable seat for all-day use."
+  },
+  {
+    "id": 3,
+    "image": "todays/clock.jpg",
+    "name": "Classic Wall Clock with Silent Quartz Movement",
+    "price": "$110",
+    "oldPrice": "$180",
+    "rating": 4.5,
+    "reviewCount": 15,
+    "description": "Add a touch of elegance to your home with this classic wall clock, equipped with a silent quartz movement for a peaceful environment."
+  },
+  {
+    "id": 4,
+    "image": "todays/earpode.webp",
+    "name": "Wireless Earbuds with Noise Cancellation and Long Life",
+    "price": "$220",
+    "oldPrice": "$290",
+    "rating": 4.0,
+    "reviewCount": 20,
+    "description": "Enjoy crystal-clear audio with these wireless earbuds, featuring noise cancellation and extended battery life for uninterrupted listening."
+  },
+  {
+    "id": 5,
+    "image": "todays/watch.webp",
+    "name": "Apple Smartwatch Series 6 with Fitness and Health Tracking",
+    "price": "$250",
+    "oldPrice": "$350",
+    "rating": 4.0,
+    "reviewCount": 12,
+    "description": "Stay on top of your health and fitness goals with the Apple Smartwatch Series 6, offering advanced tracking features and seamless integration with your iPhone."
+  },
+  {
+    "id": 6,
+    "image": "todays/realmeearbuds.jpg",
+    "name": "Realme Buds Air Pro True Wireless Earbuds",
+    "price": "$80",
+    "oldPrice": "$100",
+    "rating": 4.3,
+    "reviewCount": 1200,
+    "description": "Experience immersive sound with the Realme Buds Air Pro, offering active noise cancellation, 25 hours of playback, and a lightweight, comfortable design perfect for all-day wear."
+  },
+  {
+    "id": 7,
+    "image": "todays/trimmer.jpg",
+    "name": "Philips Norelco Beard Trimmer Series 7000 with Precision Length Settings",
+    "price": "$50",
+    "oldPrice": "$70",
+    "rating": 4.5,
+    "reviewCount": 150,
+    "description": "Achieve a perfect trim with the Philips Norelco Beard Trimmer Series 7000, featuring precision length settings, powerful blades, and a built-in vacuum for a mess-free experience."
+  },
+  {
+    "id": 8,
+    "image": "todays/headphone.jpg",
+    "name": "Sony WH-1000XM4 Wireless Noise-Canceling Headphones",
+    "price": "$300",
+    "oldPrice": "$350",
+    "rating": 4.7,
+    "reviewCount": 2500,
+    "description": "Experience unparalleled sound quality and noise cancellation with the Sony WH-1000XM4 wireless headphones, offering up to 30 hours of battery life and adaptive sound control."
+  },
+  {
+    "id": 9,
+    "image": "todays/oneplusearbuds.jpg",
+    "name": "OnePlus Buds Pro True Wireless Earbuds",
+    "price": "$120",
+    "oldPrice": "$150",
+    "rating": 4.4,
+    "reviewCount": 900,
+    "description": "Enjoy rich sound and seamless connectivity with the OnePlus Buds Pro, featuring active noise cancellation, long battery life, and a comfortable, ergonomic design."
+  }
+]

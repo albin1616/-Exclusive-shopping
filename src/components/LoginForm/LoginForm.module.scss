@@ -79,6 +79,23 @@
       }
     }
   }
+  
+  .toastMessage {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    color: $primary-white;
+    font-family: $main-font;
+  }
+
+  .toastSuccess {
+    background-color: $succes-green;
+  }
+
+  .toastError {
+    background-color: $error-red;
+  }
 }
 
 @media screen and (max-width: 900px) {

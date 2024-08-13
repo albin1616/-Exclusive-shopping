@@ -1,12 +1,12 @@
 import CustomInput from "../CustumInput/CustomInput";
-import { getImageUrl } from "../../utils";
+import { getImageUrl } from "../../utils/utils";
 import CustomButton from "../CustomButton/CustomButton";
 import { useState } from "react";
 import { RegisterCredentials } from "../../types/types";
 import { AuthConstants } from "../../constants/AuthConstant";
 import { validateForm } from "../Validation/validation";
-import styles from "./RegisterForm.module.scss";
 import { Link } from "react-router-dom";
+import styles from "./RegisterForm.module.scss";
 
 export default function RegisterForm() {
   const [errors, setErrors] = useState<Partial<RegisterCredentials>>({});

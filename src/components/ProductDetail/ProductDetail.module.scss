@@ -1,0 +1,139 @@
+@import "../../scss/vars.scss";
+
+.productDetail {
+  font-family: $main-font;
+  display: flex;
+  gap: 4rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+
+  .image {
+    max-height: 80vh;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .content {
+    flex: 1;
+    margin-top: 2rem;
+
+    .name {
+      font-size: 2rem;
+      line-height: 3rem;
+      width: 70%;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+
+      .oldPrice {
+        margin-right: 1rem;
+        color: grey;
+        text-decoration: line-through;
+      }
+
+      .newPrice {
+        font-weight: bold;
+        color: $primary-red;
+      }
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+
+      .reviewCount {
+        margin-left: 0.5rem;
+        font-size: 1rem;
+      }
+    }
+
+    .description {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      width: 70%;
+      line-height: 1.8rem;
+    }
+
+    .cart {
+      background-color: $primary-red;
+      color: white;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      margin-right: 2rem;
+
+      &:hover {
+        background-color: darken(red, 10%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .productDetail {
+    flex-direction: row;
+    gap: 1rem;
+
+    .image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      width: 100%;
+      margin-top: 0;
+
+      .name {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        width: 100%;
+      }
+
+      .price {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+
+        .oldPrice {
+          margin-right: 0.5rem;
+        }
+
+        .newPrice {
+          color: $primary-red;
+        }
+      }
+
+      .rating {
+        margin-top: 0.5rem;
+
+        .reviewCount {
+          font-size: 0.875rem;
+        }
+      }
+
+      .description {
+        margin-top: 1rem;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        width: 100%;
+      }
+
+      .cart {
+        margin-top: 1rem;
+        width: 100%;
+        padding: 0.7rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}

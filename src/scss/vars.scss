@@ -1,18 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 $main-font: "Jost", sans-serif;
 
 /*Red shades*/
 $primary-red: #f70606;
-$error-red:red;
+$error-red: red;
 $dark-red: #d32f2f;
 $medium-red: #ef4444;
 $light-red: #ef6e6e;
+$bg_dark-red: #b33000;
 
 /*White shades*/
 $primary-white: #ffffff;
+$grey: #999;
+$lighgray: lightgray;
+$border-white: #ccc;
+$bg-white: #eee;
+$bg-search-white: #f5f2ef;
 
 /*Black Shades*/
-$primary-black:#0c0c0c;
+$primary-black: #0c0c0c;
+
+/* Color shades*/
+$gold: gold;
+$succes-green: #28a745;
 /*Font-Family*/
 $times-new-roman: "Times New Roman", Times, serif;
 
