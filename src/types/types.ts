@@ -1,8 +1,8 @@
-import { EmblaOptionsType } from "embla-carousel";
+import { EmblaOptionsType } from 'embla-carousel';
 export interface CustomButtonProps {
   label: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  type?: "button" | "submit" | "reset";
+  type?: 'button' | 'submit' | 'reset';
   className?: string;
 }
 
@@ -84,3 +84,10 @@ export type UsePrevNextButtonsType = {
   onPrevButtonClick: () => void;
   onNextButtonClick: () => void;
 };
+
+export interface AboutCardProps {
+  name?: string;
+  image: string;
+  views: string;
+  description: string;
+}

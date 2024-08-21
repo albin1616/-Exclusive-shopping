@@ -7,14 +7,15 @@ import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const location = useLocation();
-  const hideNavbarRoutes = ["/login", "/register"];
+  const hideRoutes = ["/login", "/register"];
 
   return (
     <div>
-      {!hideNavbarRoutes.includes(location.pathname) && <Navbar />}
+      {!hideRoutes.includes(location.pathname) && <Navbar />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginForm />} />
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      {!hideRoutes.includes(location.pathname) && <Footer />}
     </div>
   );
 }
