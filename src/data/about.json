@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "image": "about/icon_shop.png",
+    "views": "10.5k",
+    "description": "Sallers active our site"
+  },
+
+  {
+    "id": 2,
+    "image": "about/Sale1.png",
+    "views": "33k",
+    "description": "Monthly Product Sale"
+  },
+  {
+    "id": 3,
+    "image": "about/ShoppingBag.png",
+    "views": "45.5k",
+    "description": "Customer active in our site"
+  },
+  {
+    "id": 4,
+    "image": "about/Moneybag.png",
+    "views": "25k",
+    "description": "Anual gross sale in our site"
+  }
+]

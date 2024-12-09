@@ -1,0 +1,207 @@
+@import "../../scss/vars.scss";
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+
+  .toastMessage {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    color: $primary-white;
+    font-family: $main-font;
+    background-color: $succes-green;
+  }
+
+  .modalContent {
+    background: $primary-white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    position: relative;
+    max-width: 50rem;
+    width: 100%;
+    max-height: 90vh;
+    overflow: auto;
+
+    .closeButton {
+      position: absolute;
+      top: 0.6rem;
+      right: 0.6rem;
+      font-size: 1.5rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cartTitle {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: $primary-black;
+    }
+
+    .cartItems {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      align-items: center;
+      padding: 1rem;
+      border: 1px solid $border-white;
+      border-radius: 0.4rem;
+
+      .image {
+        height: 10vh;
+        border-radius: 1rem;
+      }
+
+      .name {
+        flex: 1;
+        font-size: 1.1rem;
+      }
+
+      .price {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $primary-red;
+      }
+
+      .quantityControls {
+        display: flex;
+        align-items: center;
+
+        .decrement,
+        .increment {
+          padding: 0.7rem;
+          border: 1px solid $border-white;
+          background-color: $bg-white;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: 600;
+        }
+
+        .quantity {
+          margin: 0 1rem;
+          font-weight: 600;
+        }
+      }
+
+      .removeButton {
+        height: 2.5rem;
+        width: 2.5rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 0.5rem;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .totalAmount {
+      text-align: right;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+    }
+
+    .placeOrder {
+      background-color: $primary-red;
+      color: $primary-white;
+      border: none;
+      padding: 0.7rem;
+      cursor: pointer;
+      border-radius: 0.3rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+
+      &:hover {
+        background-color: $bg_dark-red;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .modal {
+    flex-direction: column;
+    align-items: center;
+
+    .modalContent {
+      max-width: 20.625rem;
+      padding: 1rem;
+      max-height: 100vh;
+      overflow: auto;
+
+      .cartItems {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid $border-white;
+        border-radius: 0.5rem;
+        margin-right: 2rem;
+
+        .image {
+          height: 15vh;
+          width: auto;
+          margin-bottom: 0.5rem;
+        }
+
+        .name {
+          font-size: 0.9rem;
+          text-align: center;
+        }
+
+        .price {
+          font-size: 1rem;
+          color: $primary-red;
+        }
+
+        .quantityControls {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 0.5rem;
+          width: 100%;
+
+          .decrement,
+          .increment {
+            padding: 0.5rem;
+          }
+
+          .quantity {
+            margin: 0 0.5rem;
+          }
+        }
+
+        .removeButton {
+          margin-top: 0.5rem;
+          width: auto;
+        }
+      }
+
+      .totalAmount {
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+
+      .placeOrder {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

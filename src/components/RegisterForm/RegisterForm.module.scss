@@ -1,0 +1,146 @@
+@import "../../scss/vars.scss";
+@import "../../scss/mixins.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  height: 100vh;
+
+  .authContainer {
+    display: flex;
+    align-items: center;
+    min-width: 45rem;
+    gap: 10rem;
+    width: $full-width;
+
+    .authImg {
+      width: 50%;
+      min-width: 30rem;
+      height: 100vh;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-family: $main-font;
+
+      h1 {
+        @include auth-header;
+      }
+
+      p {
+        font-size: 1.2rem;
+        font-weight: 450;
+      }
+
+      .form {
+        width: $full-width;
+
+        .input {
+          font-size: 1rem;
+          font-family: $main-font;
+        }
+        .error {
+          color: $dark-red;
+          font-size: 0.85rem;
+        }
+        .registerButton {
+          width: $full-width;
+          background-color: $primary-black;
+          font-size: 1.3rem;
+          margin: 1.5rem 0;
+        }
+      }
+      .registerLink {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: $main-font;
+
+        p {
+          font-weight: 390;
+        }
+
+        .link {
+          color: $medium-red;
+          padding: 1rem 0;
+          font-weight: 450;
+
+          &:hover {
+            color: $light-red;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    .authContainer {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      min-width: unset;
+      background-image: url("~/public/assets/auth/auth.png");
+      background-color: rgba(84, 83, 83, 0.574);
+      background-blend-mode: darken;
+      background-size: cover;
+      background-position: center;
+      object-fit: cover;
+      overflow: hidden;
+
+      .authImg {
+        display: none;
+        min-width: unset;
+      }
+
+      .content {
+        width: 80%;
+        color: $primary-white;
+
+        h1 {
+          font-size: 2rem;
+          font-weight: 500;
+        }
+
+        p {
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: auto;
+        }
+        .form {
+          .input {
+            font-size: 0.999rem;
+            font-family: $main-font;
+            outline: none;
+          }
+          .error {
+            color: $error-red;
+            font-size: 0.85rem;
+          }
+          .registerButton {
+            font-size: 1.01rem;
+            padding: 0.5rem;
+          }
+        }
+
+        .registerLink {
+          p {
+            font-weight: 500;
+          }
+
+          .link {
+            font-size: 1rem;
+            font-weight: 500;
+            color: $primary-white;
+          }
+        }
+      }
+    }
+  }
+}

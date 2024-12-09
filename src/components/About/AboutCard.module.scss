@@ -1,0 +1,47 @@
+@import '../../scss/vars.scss';
+.aboutCard {
+  border: 2px solid $primary-black;
+  width: 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.7rem;
+  margin-top: 1.5rem;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: $medium-red;
+    color: $primary-white;
+    transition: box-shadow 0.3s ease; 
+
+    .image {
+      box-shadow: 0 0 0 0.7rem rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .image {
+    background-color: $primary-black;
+    width: 3.7rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+  }
+  
+  .details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 9.5rem;
+    text-align: center;
+
+    .views {
+      font-size: 1.7rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .description {
+      margin-top: 0rem;
+      font-size: 1.1rem;
+    }
+  }
+}

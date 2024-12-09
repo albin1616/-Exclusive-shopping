@@ -1,0 +1,30 @@
+[
+  {
+    "imgSrc": "navbar/iphone14.jpg",
+    "imgAlt": "iPhone 14",
+    "description": "Experience the latest iPhone 14 Series now!",
+    "headline": "Save Up to 10% Off",
+    "link": "/shop"
+  },
+  {
+    "imgSrc": "navbar/lg.jpg",
+    "imgAlt": "LG TV",
+    "description": "Upgrade to the Samsung T4380A Series today!",
+    "headline": "Enjoy Up to 40% Off",
+    "link": "/shop"
+  },
+  {
+    "imgSrc": "navbar/canon.jpg",
+    "imgAlt": "Canon Camera",
+    "description": "Capture moments with the Canon EOS DSLR now!",
+    "headline": "Get Up to 30% Off",
+    "link": "/shop"
+  },
+  {
+    "imgSrc": "navbar/earbud.jpg",
+    "imgAlt": "Oppo Earbud",
+    "description": "Immerse in sound with Oppo Enco Air2i earbuds!",
+    "headline": "Avail Up to 25% Off",
+    "link": "/shop"
+  }
+]

@@ -1,0 +1,11 @@
+@import "../../scss/vars.scss";
+.button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: $primary-white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-family: $times-new-roman;
+  font-weight: 600;
+}
